@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Fun Facts Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            box-shadow: 0 0 10px #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Snake Fun Facts Generator</h1>
+        <button id="factButton">Generate Another Fun Fact</button>
+        <p id="factDisplay">Click the button to see a fun fact about snakes!</p>
+    </div>
+    <script>
+        const facts = [
+            "Snakes can help predict earthquakes.",
+            "They can swallow prey bigger than their head.",
+            "Snakes don’t have eyelids.",
+            "Some sea snakes can breathe partially through their skin.",
+            "The king cobra is the longest of all venomous snakes.",
+            "Snakes smell with their tongues.",
+            "Pythons can climb trees.",
+            "Many snakes have a lifespan of more than 20 years.",
+            "Snakes don’t have ears but can sense vibrations.",
+            "The Anaconda is the heaviest snake in the world."
+        ];
+
+        const factButton = document.getElementById('factButton');
+        const factDisplay = document.getElementById('factDisplay');
+
+        factButton.addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            factDisplay.textContent = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
